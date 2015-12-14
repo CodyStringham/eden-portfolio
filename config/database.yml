@@ -1,0 +1,21 @@
+login: &login
+  username:
+  password:
+  adapter:  postgresql
+  encoding: unicode
+  host:     localhost
+  pool:     10
+
+development:
+  username: cody
+  database: eden_portfolio_development
+  <<: *login
+
+test:
+  username: cody
+  database: eden_portfolio_test
+  <<: *login
+
+production:
+  database: eden_portfolio_production
+  <<: *login

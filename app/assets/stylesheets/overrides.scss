@@ -1,0 +1,79 @@
+// Nav Overrides
+html, body {
+  background: $dark;
+  color: #fff;
+}
+
+nav, #nav-mobile {
+  background: $darker;
+  color: #fff;
+}
+
+nav ul li {
+  &.active {
+    background: transparent;
+    &:after {
+      content: '';
+      position: absolute;
+      background: $primary;
+    }
+  }
+  @media (max-width: 980px) {
+    &.active:after {
+      bottom: 0;
+      left: 0;
+      top: 0;
+      width: 5px;
+    }
+  }
+  @media (min-width: 980px) {
+    width: 100px;
+    text-align: center;
+    &.active:after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+    }
+  }
+  position: relative;
+}
+
+.side-nav a {
+  color: #fff;
+}
+
+.side-nav li {
+  padding: 0;
+}
+
+.side-nav li:hover, .side-nav li.active {
+  background: rgba(0,0,0,0.1);
+  color: #fff;
+}
+
+
+// Slider Overrides
+.slider .slides li .caption {
+  top: initial;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  height: 150px;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+50,000000+100&0.65+50,0+90 */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: $primary;
+}
+
+
+
