@@ -1,6 +1,32 @@
+// General Overrides
+
+.btn {
+  margin: 10px;
+  &.primary {
+    background-color: $primary;
+    &:hover {
+      background-color: $primary-dark
+    }
+  }
+}
+
+.margin-right {
+  margin-right: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.waves-effect.waves-light .waves-ripple {
+ /* The alpha value allows the text and background color
+ of the button to still show through. */
+  background-color: rgba(255,255,255, 0.35);
+}
+
 // Nav Overrides
 html, body {
-  background: $dark;
+  background: $darker;
   color: #fff;
 }
 
@@ -10,6 +36,9 @@ nav, #nav-mobile {
 }
 
 nav ul li {
+  &:hover {
+    background-color: transparent;
+  }
   &.active {
     background: transparent;
     &:after {
@@ -19,6 +48,7 @@ nav ul li {
     }
   }
   @media (max-width: 980px) {
+    width: 100%;
     &.active:after {
       bottom: 0;
       left: 0;
@@ -58,15 +88,20 @@ nav ul li {
   top: initial;
   bottom: 0;
   left: 0;
-  padding: 30px;
+  padding: 20px 0 50px;
   width: 100%;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+50,000000+100&0.65+50,0+90 */
-  background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
   h3 {
     margin-top: 0;
+  }
+  h5 {
+    opacity: 0.75;
   }
 }
 
@@ -74,5 +109,25 @@ nav ul li {
   background-color: $primary;
 }
 
+.slider .indicators {
+  z-index: 10;
+  bottom: 50px;
+  .indicator-item {
+    width: 40px;
+    height: 5px;
+    margin: 0 5px;
+    border-radius: 0;
+    &.active {
+      background-color: $primary;
+    }
+  }
+}
 
-
+// Footer overrides
+footer.page-footer {
+  background: $dark;
+  .footer-copyright {
+    background-color: $darker;
+    font-size: 0.8em;
+  }
+}

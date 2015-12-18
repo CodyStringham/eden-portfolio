@@ -1,11 +1,4 @@
-%li.active
-  = link_to 'Home', root_path
-
-%li
-  = link_to 'Work', root_path
-
-%li
-  = link_to 'About', root_path
-
-%li
-  = link_to 'Contact', root_path
+- nav_link('home', root_path)
+- nav_link('work', work_path)
+- nav_link('about', root_path)
+- nav_link('contact', root_path)
