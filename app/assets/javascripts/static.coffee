@@ -2,6 +2,12 @@ $ ->
   $('.button-collapse').sideNav()
   $('.slider').slider({
     full_width: true
-    height: ( $(window).height() - 64 )
+    height: 400
   });
   Waves.displayEffect()
+
+$(document).on 'page:fetch', ->
+  $('#main-content').addClass('animated fadeOut')
+
+$(document).on 'page:change', ->
+  $('#main-content').addClass('animated fadeInUp')

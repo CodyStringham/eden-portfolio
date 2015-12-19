@@ -1,10 +1,12 @@
-= render 'static/hero_slide'
+
 .container
-  .section
-    .row
-      .col.s12.text-center
-        = link_to 'See All Work', work_path, class: 'btn primary waves-effect waves-light'
-        = link_to 'Contact Eden', root_path, class: 'btn primary waves-effect waves-light'
+  .row
+    .col.s12
+      = render 'static/hero_slide'
+
+      -# .col.s12.text-center
+      -#   = link_to 'See All Work', work_path, class: 'btn primary waves-effect waves-light'
+      -#   = link_to 'Contact Eden', root_path, class: 'btn primary waves-effect waves-light'
 -# .container
 -#   .section
 -#     / Icon Section

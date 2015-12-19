@@ -1,0 +1,22 @@
+.container
+  .section
+    .row
+      .col.s12.m9
+        %h1 Contact Eden
+    .row
+      %form.col.s12
+        .row
+          .input-field.col.s6
+            %input#first_name.validate{:placeholder => "Placeholder", :type => "text"}/
+            %label{:for => "first_name"} First Name
+          .input-field.col.s6
+            %input#last_name.validate{:type => "text"}/
+            %label{:for => "last_name"} Last Name
+        .row
+          .input-field.col.s12
+            %input#password.validate{:type => "password"}/
+            %label{:for => "password"} Password
+        .row
+          .input-field.col.s12
+            %input#email.validate{:type => "email"}/
+            %label{:for => "email"} Email
