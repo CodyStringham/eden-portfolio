@@ -7,9 +7,11 @@ $mid: #97979F;
 $light: #AFAFB9;
 $lighter: #BBBBC6;
 
+$input-focus-color: $primary;
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-@import "animate";
 @import "materialize";
 @import "overrides";
+@import "animate";
 @import "static";
 

@@ -7,6 +7,7 @@ gem 'puma'
 
 gem 'figaro'
 gem "paperclip", "~> 4.3"
+gem 'mail_form'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 5.0'
@@ -20,6 +21,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 
 group :development do
+  gem 'letter_opener'
   gem 'jazz_fingers'
   gem 'awesome_print', require: false
   gem 'pry-remote'
