@@ -6,6 +6,7 @@ gem 'pg'
 gem 'puma'
 
 gem 'figaro'
+gem "paperclip", "~> 4.3"
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 5.0'
