@@ -1,7 +1,6 @@
 // General Overrides
 
 .btn {
-  margin: 10px;
   &.primary {
     background-color: $primary;
     &:hover {
@@ -190,6 +189,12 @@ footer.page-footer {
     color: $mid;
     &:hover {
       color: #fff;
+    }
+    &.admin-link {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
     }
   }
   .footer-lower {

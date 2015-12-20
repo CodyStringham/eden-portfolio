@@ -1,6 +1,3 @@
-.container
-  .section
-    .row
-      .col.s12.m9
-        %h1 Sign In
-  = render partial: '/sessions/form'
+- content_for(:page_title) do
+  Sign In
+= render partial: '/sessions/form'

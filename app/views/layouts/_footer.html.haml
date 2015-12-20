@@ -13,7 +13,9 @@
     .container
       .row
         .col.s12.m4
-          &copy; #{Time.now.year} EDEN COMFORT HIBBERT
+          %span &copy; #{Time.now.year} EDEN
+          = link_to 'COMFORT', sign_in_path, class: 'admin-link'
+          %span HIBBERT
         .col.s12.m4.text-center
           .social-media
             = link_to 'http://www.pinterest.com/edenhibbert/', target: '_blank' do

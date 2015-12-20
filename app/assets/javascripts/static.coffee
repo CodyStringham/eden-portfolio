@@ -6,8 +6,8 @@ $ ->
   });
   Waves.displayEffect()
 
-$(document).on 'page:fetch', ->
-  $('#main-content').addClass('animated fadeOut')
+# $(document).on 'page:fetch', ->
+#   $('#main-content').addClass('animated fadeOut')
 
 $(document).on 'page:change', ->
   $('#main-content').addClass('animated fadeInUp')

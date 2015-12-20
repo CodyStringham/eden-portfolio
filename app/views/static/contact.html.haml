@@ -1,27 +1,25 @@
-.container
-  .section
+- content_for(:page_title) do
+  Contact Eden
+
+.row
+  = form_tag(send_message_path, method: :post, class: 'col s12') do
     .row
-      .col.s12.m9
-        %h1 Contact Eden
+      .input-field.col.s12.m4
+        = text_field_tag :first_name, params[:first_name], required: true
+        = label_tag :first_name, 'First Name'
+      .input-field.col.s12.m4
+        = text_field_tag :last_name, params[:last_name], required: true
+        = label_tag :last_name, 'Last Name'
+      .input-field.col.s12.m4
+        = text_field_tag :email, params[:email], type: 'email', required: true
+        = label_tag :email, 'Email'
     .row
-      = form_tag(send_message_path, method: :post, class: 'col s12') do
-        .row
-          .input-field.col.s12.m4
-            = text_field_tag :first_name, params[:first_name], required: true
-            = label_tag :first_name, 'First Name'
-          .input-field.col.s12.m4
-            = text_field_tag :last_name, params[:last_name], required: true
-            = label_tag :last_name, 'Last Name'
-          .input-field.col.s12.m4
-            = text_field_tag :email, params[:email], type: 'email', required: true
-            = label_tag :email, 'Email'
-        .row
-          .input-field.col.s12
-            = text_area_tag :message, params[:message], class: 'materialize-textarea', required: true
-            = label_tag :message, 'Message'
-        .row
-          .input-field.col.s12
-            = submit_tag "Send Message", class: 'btn primary waves-effect waves-light'
+      .input-field.col.s12
+        = text_area_tag :message, params[:message], class: 'materialize-textarea', required: true
+        = label_tag :message, 'Message'
+    .row
+      .input-field.col.s12
+        = submit_tag "Send Message", class: 'btn primary waves-effect waves-light'
 
 
 

@@ -11,7 +11,12 @@
   %body
     = render 'layouts/nav'
     %main
-      #main-content
-        = render 'layouts/flash'
+      #main-content.container
+        .section
+          = render 'layouts/flash'
+          - if content_for?(:page_title)
+            .row
+              .col.s12
+                %h1= yield :page_title
         = yield
-    = render 'layouts/footer'
+    = render 'layouts/footer' if params[:controller] == 'static'
