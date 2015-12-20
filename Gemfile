@@ -6,13 +6,14 @@ gem 'pg'
 gem 'puma'
 
 gem 'figaro'
-gem "paperclip", "~> 4.3"
+gem 'paperclip', '~> 4.3'
 gem 'mail_form'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'materialize-sass'
-gem "animate-rails"
+gem 'animate-rails'
+gem 'font-awesome-rails'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'

@@ -1,8 +1,8 @@
 $primary: #03A9F4;
 $primary-dark: #0288D1;
 
-$darker: #363639;
-$dark: #505056;
+$darker: #222226;
+$dark: #3C3C42;
 $mid: #97979F;
 $light: #AFAFB9;
 $lighter: #BBBBC6;
@@ -13,5 +13,6 @@ $input-focus-color: $primary;
 @import "materialize";
 @import "overrides";
 @import "animate";
+@import "font-awesome";
 @import "static";
 

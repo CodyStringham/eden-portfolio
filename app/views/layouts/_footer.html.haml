@@ -9,6 +9,21 @@
         %h4.white-text Less is more.
         %p.grey-text.text-lighten-4 — Ludwig Mies van der Rohe
 
-  .footer-copyright
+  .footer-lower
     .container
-      &copy; #{Time.now.year} EDEN HIBBERT
+      .row
+        .col.s12.m4
+          &copy; #{Time.now.year} EDEN COMFORT HIBBERT
+        .col.s12.m4.text-center
+          .social-media
+            = link_to 'http://www.pinterest.com/edenhibbert/', target: '_blank' do
+              %span.fa.fa-pinterest
+            = link_to 'http://www.linkedin.com/pub/eden-hibbert/7b/613/816/', target: '_blank' do
+              %span.fa.fa-linkedin-square
+            = link_to 'https://plus.google.com/u/0/100942330703858178433/about', target: '_blank' do
+              %span.fa.fa-google-plus-square
+        .col.s12.m4.text-right
+          DEISIGN & DEV
+          = link_to '5TRINGY CREATIVE', 'http://stringycreative.com/'
+
+

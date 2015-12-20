@@ -18,10 +18,20 @@
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .waves-effect.waves-light .waves-ripple {
- /* The alpha value allows the text and background color
- of the button to still show through. */
   background-color: rgba(255,255,255, 0.35);
+}
+
+.waves-effect.waves-nav .waves-ripple {
+  background-color: rgba(255,255,255, 0.1);
+}
+
+.toast {
+  background-color: $primary-dark;
 }
 
 // Nav Overrides
@@ -118,6 +128,10 @@ nav ul li {
 
 
 // Slider Overrides
+.slider {
+  margin-top: 40px;
+}
+
 .slider .slides li .caption {
   top: initial;
   bottom: 0;
@@ -164,12 +178,42 @@ footer.page-footer {
   background: $dark;
   position: relative;
   z-index: 100;
-  padding-top: 5px;
+  padding-top: 2.5px;
   .row {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
-  .footer-copyright {
+  .stringy-plug {
+    display: inline;
+    margin-left: 10px;
+  }
+  a {
+    color: $mid;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .footer-lower {
+    padding: 20px 0 0;
+    min-height: 50px;
     background-color: $darker;
     font-size: 0.8em;
+    .social-media {
+      position: relative;
+      bottom: 10px;
+      font-size: 2.5em;
+      span {
+        margin-left: 10px;
+      }
+    }
+    @media (max-width: 600px) {
+      text-align: center !important;
+      .text-right {
+        text-align: center;
+      }
+      .social-media {
+        bottom: 0;
+        margin: 10px 0;
+      }
+    }
   }
 }
