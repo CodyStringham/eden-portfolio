@@ -1,4 +1,7 @@
 class StaticController < ApplicationController
+
+  before_action :require_login, only: :about
+
   def home
   end
 

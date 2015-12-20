@@ -2,3 +2,6 @@
 - nav_link('work', work_path)
 - nav_link('about', about_path)
 - nav_link('contact', contact_path)
+- if signed_in?
+  %li.waves-effect.waves-nav
+    = link_to 'Sign Out', sign_out_path, method: :delete

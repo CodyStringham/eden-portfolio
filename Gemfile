@@ -8,6 +8,7 @@ gem 'puma'
 gem 'figaro'
 gem 'paperclip', '~> 4.3'
 gem 'mail_form'
+gem 'clearance'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 5.0'
