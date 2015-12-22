@@ -7,18 +7,44 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    @project = Project.new
   end
 
   def create
+    @project = Project.new(project_params)
+    if @project.save
+      redirect_to projects_path, notice: 'Project created.'
+    else
+      render :new
+    end
   end
 
   def edit
+    @project = Project.find(params[:id])
   end
 
   def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      redirect_to projects_path, notice: 'Project updated.'
+    else
+      render :edit
+    end
   end
 
-  def delete
+  def destroy
+    @project = Project.find(params[:id])
+    if @project.destroy
+      redirect_to projects_path, notice: "Project deleted."
+    else
+      redirect_to projects_path, notice: "Project could not be deleted."
+    end
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(:name, :date, :details, :image)
   end
 
 end

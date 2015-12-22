@@ -6,6 +6,12 @@ $ ->
   });
   Waves.displayEffect()
 
+$ ->
+  $('.datepicker').pickadate({
+     selectMonths: true
+     selectYears: 15
+   });
+
 # $(document).on 'page:fetch', ->
 #   $('#main-content').addClass('animated fadeOut')
 

@@ -1,0 +1,23 @@
+= form_for(@project) do |form|
+  .row
+    .file-field.input-field.col.s12.m4
+      .btn
+        %span File
+        = form.file_field :image
+      .file-path-wrapper
+        %input.file-path.validate{:type => "text"}/
+    .input-field.col.s12.m4
+      = form.text_field :name
+      = form.label :name
+    .input-field.col.s12.m4
+      = form.date_field :date, class: 'datepicker'
+      = form.label :date
+    .input-field.col.s12
+      = form.text_area :details, class: 'materialize-textarea'
+      = form.label :details
+  .row
+    .input-field.col.s12
+      = form.submit nil, class: 'btn primary waves-effect waves-light'
+
+
+
