@@ -10,6 +10,11 @@
 
   %body
     = render 'layouts/nav'
+
+    #the-present
+      .the-header Merry Christmas, Eden
+      .the-button.btn-large.btn.waves-effect.waves-light.open-present Open Your Present!
+
     %main
       #main-content.container
         .section
@@ -19,4 +24,7 @@
               .col.s12
                 %h1= yield :page_title
         = yield
-    = render 'layouts/footer' if params[:controller] == 'static'
+    - if params[:controller] == 'static'
+      = render 'layouts/footer'
+    - else
+      .footer-padding

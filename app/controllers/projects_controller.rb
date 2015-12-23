@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @project.images.build
   end
 
   def create
@@ -44,7 +45,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :date, :details, :image)
+    params.require(:project).permit(:name, :date, :details, :image, images_attributes: [:id, :file, :_destroy] )
   end
 
 end

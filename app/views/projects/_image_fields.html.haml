@@ -1,0 +1,12 @@
+.nested-fields
+  .row
+    .file-field.input-field.col.s10
+      .btn
+        %span File
+        = f.file_field :file, value: 'hello'
+      .file-path-wrapper
+        %input.file-path.validate{:type => "text"}/
+    .col.s1
+      = image_tag( f.object.file.url(:thumb), class: 'form-image' )
+    .col.s1
+      = link_to_remove_association "remove image", f

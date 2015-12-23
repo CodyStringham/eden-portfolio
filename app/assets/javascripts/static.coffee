@@ -12,8 +12,8 @@ $ ->
      selectYears: 15
    });
 
-# $(document).on 'page:fetch', ->
-#   $('#main-content').addClass('animated fadeOut')
-
 $(document).on 'page:change', ->
   $('#main-content').addClass('animated fadeInUp')
+
+$(document).on 'click', '.open-present', ->
+  $("#the-present").fadeOut()
