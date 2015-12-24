@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20151223200704) do
 
   create_table "images", force: :cascade do |t|
     t.string   "caption"
+    t.boolean  "featured"
     t.integer  "project_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false

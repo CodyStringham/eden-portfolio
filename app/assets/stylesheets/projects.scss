@@ -9,6 +9,11 @@
   }
 }
 
-.form-image {
-  width: 100%;
+.image-container {
+  max-height: 75px;
+  overflow: hidden;
+  .form-image {
+    width: 100%;
+  }
 }
+

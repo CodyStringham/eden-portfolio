@@ -4,16 +4,18 @@
 %table.bordered.responsive-table
   %thead
     %tr
-      %th{"data-field" => "id"} Name
-      %th{"data-field" => "name"} Date
-      %th{"data-field" => "price"} Details
-      %th{"data-field" => "price"} Actions
+      %th{"data-field" => "name"} Name
+      %th{"data-field" => "date"} Date
+      %th{"data-field" => "details"} Details
+      %th{"data-field" => "featured"} Featured Image?
+      %th{"data-field" => "actions"} Actions
   %tbody
     - @projects.each do |project|
       %tr
         %td= project.name
         %td= project.date
         %td= project.details
+        %td= project.images.any? {|x| x.featured}
         %td.project-actions
           = link_to edit_project_path(project.id), class: 'tooltipped', data: { position: "left", delay: "1", tooltip: "Edit" } do
             %i.fa.fa-pencil

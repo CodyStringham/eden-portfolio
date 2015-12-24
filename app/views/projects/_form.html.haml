@@ -13,7 +13,9 @@
   = f.fields_for :images do |image|
     = render 'projects/image_fields', f: image
   .links.col.s12
-    = link_to_add_association 'add image', f, :images
+    = link_to_add_association f, :images, class: 'btn' do
+      %span.fa.fa-plus
+      %span Add Image
 
   .row
     .input-field.col.s12

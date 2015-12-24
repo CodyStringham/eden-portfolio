@@ -1,22 +1,28 @@
 .slider
   %ul.slides
-    %li
-      = image_tag('eden-1.jpg')
-      .caption.left-align
-        %h2 Arava Hospital
-        %h4 Duis aute irure dolor in reprehenderit in voluptate velit
-    %li
-      = image_tag('eden-2.jpg')
-      .caption.left-align
-        %h2 Norwood Acadamy
-        %h4 Duis aute irure dolor in reprehenderit in voluptate velit
-    %li
-      = image_tag('eden-3.jpg')
-      .caption.left-align
-        %h2 The Vine
-        %h4 Duis aute irure dolor in reprehenderit in voluptate velit
-    %li
-      = image_tag('eden-4.jpg')
-      .caption.left-align
-        %h2 Morris Residence
-        %h4 Duis aute irure dolor in reprehenderit in voluptate velit
+    - @slides.each do |slide|
+      %li
+        = image_tag( slide.file.url(:slider) )
+        .caption.left-align
+          %h2= slide.project.name.titleize
+          %h4= slide.project.details
+    -# %li
+    -#   = image_tag('eden-1.jpg')
+    -#   .caption.left-align
+    -#     %h2 Arava Hospital
+    -#     %h4 Duis aute irure dolor in reprehenderit in voluptate velit
+    -# %li
+    -#   = image_tag('eden-2.jpg')
+    -#   .caption.left-align
+    -#     %h2 Norwood Acadamy
+    -#     %h4 Duis aute irure dolor in reprehenderit in voluptate velit
+    -# %li
+    -#   = image_tag('eden-3.jpg')
+    -#   .caption.left-align
+    -#     %h2 The Vine
+    -#     %h4 Duis aute irure dolor in reprehenderit in voluptate velit
+    -# %li
+    -#   = image_tag('eden-4.jpg')
+    -#   .caption.left-align
+    -#     %h2 Morris Residence
+    -#     %h4 Duis aute irure dolor in reprehenderit in voluptate velit

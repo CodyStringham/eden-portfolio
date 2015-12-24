@@ -1,6 +1,7 @@
 class StaticController < ApplicationController
 
   def home
+    @slides = Image.where(featured: true)
   end
 
   def work

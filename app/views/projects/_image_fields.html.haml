@@ -1,12 +1,17 @@
-.nested-fields
-  .row
-    .file-field.input-field.col.s10
-      .btn
-        %span File
-        = f.file_field :file, value: 'hello'
-      .file-path-wrapper
-        %input.file-path.validate{:type => "text"}/
-    .col.s1
+.nested-fields.row
+  .file-field.input-field.col.m6.s12
+    .btn
+      %span File
+      = f.file_field :file
+    .file-path-wrapper
+      %input.file-path.validate{:type => "text"}/
+  .col.m2.s6
+    .margin-top
+      = f.check_box :featured, checked: f.object.featured
+      = f.label :featured
+  .col.m2.s6
+    .image-container
       = image_tag( f.object.file.url(:thumb), class: 'form-image' )
-    .col.s1
-      = link_to_remove_association "remove image", f
+  .col.m2.s12.text-right
+    = link_to_remove_association f, class: 'btn margin-top' do
+      %span.fa.fa-trash
