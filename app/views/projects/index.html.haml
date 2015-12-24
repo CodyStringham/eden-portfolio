@@ -7,15 +7,16 @@
       %th{"data-field" => "name"} Name
       %th{"data-field" => "date"} Date
       %th{"data-field" => "details"} Details
-      %th{"data-field" => "featured"} Featured Image?
+      %th{"data-field" => "featured"} Featured
       %th{"data-field" => "actions"} Actions
   %tbody
     - @projects.each do |project|
       %tr
         %td= project.name
-        %td= project.date
+        %td= time_tag(project.date.to_date)
         %td= project.details
-        %td= project.images.any? {|x| x.featured}
+        %td
+          %span.featured-icon{class: "#{ 'fa fa-star' if project.images.any? {|x| x.featured} }"}
         %td.project-actions
           = link_to edit_project_path(project.id), class: 'tooltipped', data: { position: "left", delay: "1", tooltip: "Edit" } do
             %i.fa.fa-pencil

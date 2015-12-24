@@ -211,6 +211,9 @@ footer.page-footer {
     display: inline;
     margin-left: 10px;
   }
+  .text-mid {
+    color: $mid;
+  }
   a {
     color: $mid;
     &:hover {

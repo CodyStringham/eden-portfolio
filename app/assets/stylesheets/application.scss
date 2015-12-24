@@ -7,7 +7,14 @@ $mid: #97979F;
 $light: #AFAFB9;
 $lighter: #BBBBC6;
 
-$input-focus-color: $primary;
+$primary-color: $primary;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: $primary;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: $primary;
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import "materialize";

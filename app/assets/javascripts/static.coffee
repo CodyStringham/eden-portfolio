@@ -12,6 +12,11 @@ $ ->
      selectYears: 15
    });
 
+$ ->
+  $('.carousel').carousel({
+    dist: -75
+  });
+
 $(document).on 'page:change', ->
   $('#main-content').addClass('animated fadeInUp')
 

@@ -5,6 +5,11 @@ class StaticController < ApplicationController
   end
 
   def work
+    @projects = Project.all
+  end
+
+  def show
+    @project = Project.friendly.find(params[:id])
   end
 
   def about

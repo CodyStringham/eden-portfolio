@@ -4,8 +4,7 @@ class Image < ActiveRecord::Base
 
   has_attached_file :file, styles: {
     slider: "1200x400#",
-    gallery: "600x371#",
-    thumb: "50x50#" },
+    thumb: "100x100#" },
     default_url: 'missing.png'
   validates_attachment_content_type :file, content_type: /\Aimage\/.*\Z/
 

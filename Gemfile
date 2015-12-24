@@ -10,6 +10,7 @@ gem 'paperclip', '~> 4.3'
 gem 'mail_form'
 gem 'cocoon'
 gem 'clearance'
+gem 'friendly_id', '~> 5.1.0'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 5.0'
