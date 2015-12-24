@@ -4,6 +4,9 @@
 %span= @project.details
 
 .slider
+  .slide-controls
+    %span.fa.fa-chevron-left.slide-left
+    %span.fa.fa-chevron-right.slide-right
   %ul.slides
     - @project.images.each_with_index do |slide, i|
       %li

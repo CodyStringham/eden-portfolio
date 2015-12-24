@@ -154,14 +154,37 @@ nav ul li {
 
 // Slider Overrides
 .slider {
+  position: relative;
   margin-top: 40px;
+}
+
+.slide-controls {
+  text-align: center;
+  .slide-left, .slide-right {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -58px;
+    background: rgba(0,0,0,0.5);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .slide-left {
+    padding: 50px 12px 50px 8px;
+    left: 0;
+  }
+  .slide-right {
+    padding: 50px 8px 50px 12px;
+    right: 0;
+  }
 }
 
 .slider .slides li .caption {
   top: initial;
   bottom: 0;
   left: 0;
-  padding: 20px;
+  padding: 20px 40px;
   width: 100%;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 

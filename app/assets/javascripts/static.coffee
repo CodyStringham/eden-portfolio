@@ -20,5 +20,13 @@ $ ->
 $(document).on 'page:change', ->
   $('#main-content').addClass('animated fadeInUp')
 
+
+$(document).on 'click', '.slide-controls .slide-right', ->
+  $('.slider').slider('next');
+
+$(document).on 'click', '.slide-controls .slide-left', ->
+  $('.slider').slider('prev');
+
 $(document).on 'click', '.open-present', ->
   $("#the-present").fadeOut()
+

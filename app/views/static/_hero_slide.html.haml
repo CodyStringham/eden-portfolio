@@ -1,11 +1,14 @@
 .slider
+  .slide-controls
+    %span.fa.fa-chevron-left.slide-left
+    %span.fa.fa-chevron-right.slide-right
   %ul.slides
     - @slides.each do |slide|
       %li
         = image_tag( slide.file.url(:slider) )
         .caption.left-align
           %h2= slide.project.name.titleize
-          %h4= slide.project.details
+          = link_to 'View Project', show_work_path(slide.project.id), class: 'btn waves-effect waves-light'
     -# %li
     -#   = image_tag('eden-1.jpg')
     -#   .caption.left-align
