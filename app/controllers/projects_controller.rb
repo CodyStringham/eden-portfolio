@@ -21,11 +21,11 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
     if @project.update_attributes(project_params)
       redirect_to projects_path, notice: 'Project updated.'
     else
@@ -34,7 +34,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
     if @project.destroy
       redirect_to projects_path, notice: "Project deleted."
     else

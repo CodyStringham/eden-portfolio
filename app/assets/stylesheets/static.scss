@@ -1,4 +1,40 @@
+// Work
+@media screen and (min-width: 481px) {
+  #grid[data-columns]::before {
+    content: '2 .column.size-1of2';
+  }
+}
+@media (max-width: 480px) {
+  #grid[data-columns]::before {
+    content: '1 .column.size-1of1';
+  }
+}
+.column { float: left; }
+.size-1of2 { width: 50%; }
+.size-1of1 { width: 100%; }
+
+.project-link {
+  margin: 10px 10px 25px 10px;
+  background: $dark;
+  .image-wrap {
+    img {
+      width: 100%;
+    }
+  }
+  .text-wrap {
+
+    color: $light;
+    padding: 10px;
+    h4 {
+      margin-top: 0;
+    }
+  }
+}
+
+
+
 // About
 .about-img {
   margin-top: 1em;
 }
+
