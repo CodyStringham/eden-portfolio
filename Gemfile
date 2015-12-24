@@ -25,6 +25,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 
 group :development do
+  gem 'ffaker'
   gem 'letter_opener'
   gem 'jazz_fingers'
   gem 'awesome_print', require: false
