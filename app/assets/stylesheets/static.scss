@@ -1,15 +1,23 @@
 // Work
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 1080px) {
+  #grid[data-columns]::before {
+    content: '3 .column.size-1of3';
+  }
+}
+
+@media screen and (max-width: 1079px) {
   #grid[data-columns]::before {
     content: '2 .column.size-1of2';
   }
 }
+
 @media (max-width: 480px) {
   #grid[data-columns]::before {
     content: '1 .column.size-1of1';
   }
 }
 .column { float: left; }
+.size-1of3 { width: 33.333%; }
 .size-1of2 { width: 50%; }
 .size-1of1 { width: 100%; }
 
@@ -27,6 +35,7 @@
     padding: 10px;
     h4 {
       margin-top: 0;
+      font-size: 1.75em;
     }
   }
 }

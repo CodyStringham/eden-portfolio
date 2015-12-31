@@ -3,6 +3,7 @@ $ ->
   $('.slider').slider({
     full_width: true
     height: 400
+    interval: 10000
   });
   Waves.displayEffect()
 
@@ -26,7 +27,4 @@ $(document).on 'click', '.slide-controls .slide-right', ->
 
 $(document).on 'click', '.slide-controls .slide-left', ->
   $('.slider').slider('prev');
-
-$(document).on 'click', '.open-present', ->
-  $("#the-present").fadeOut()
 
