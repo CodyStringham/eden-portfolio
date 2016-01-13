@@ -24,5 +24,13 @@ module EdenPortfolio
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.paperclip_defaults = {
+        url: ':public/:class/:id/:attachment/:filename',
+        path: ':rails_root/:url',
+        default_url: false,
+        use_timestamp: false
+    }
+
   end
 end
