@@ -26,7 +26,7 @@ module EdenPortfolio
     config.active_record.raise_in_transactional_callbacks = true
 
     config.paperclip_defaults = {
-        url: '/public/:class/:id/:attachment/:filename',
+        url: '/public/:attachment/:id/:style.:extension',
         path: ':rails_root:url',
         default_url: false,
         use_timestamp: false
