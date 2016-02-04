@@ -25,12 +25,12 @@ module EdenPortfolio
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.paperclip_defaults = {
-        url: '/public/:attachment/:id/:style.:extension',
-        path: ':rails_root/public/system/:class/:attachment/:id_partition/:style/:filename',
-        default_url: false,
-        use_timestamp: false
-    }
+    # config.paperclip_defaults = {
+    #     url: '/public/:attachment/:id/:style.:extension',
+    #     path: ':rails_root/public/system/:class/:attachment/:id_partition/:style/:filename',
+    #     default_url: false,
+    #     use_timestamp: false
+    # }
 
   end
 end
