@@ -27,7 +27,7 @@ module EdenPortfolio
 
     config.paperclip_defaults = {
         url: '/public/:attachment/:id/:style.:extension',
-        path: ':rails_root:url',
+        path: ':rails_root/public/system/:class/:attachment/:id_partition/:style/:filename',
         default_url: false,
         use_timestamp: false
     }
