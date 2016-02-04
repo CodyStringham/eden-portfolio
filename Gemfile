@@ -37,6 +37,12 @@ group :development do
   gem 'xray-rails'
   gem 'html2haml'
   gem 'quiet_assets'
+
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 group :test do
