@@ -1,25 +1,18 @@
-login: &login
-  username:
-  password:
-  adapter:  postgresql
+default: &default
+  adapter: postgresql
   encoding: unicode
-  host:     localhost
-  pool:     10
+  username: cody
+  password:
+  pool: 5
 
 development:
-  username: cody
+  <<: *default
   database: eden_portfolio_development
-  <<: *login
 
 test:
-  username: cody
+  <<: *default
   database: eden_portfolio_test
-  <<: *login
 
 production:
-  <<: *login
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  <<: *default
+  database: eden_portfolio_production
